@@ -1,0 +1,88 @@
+ALGORITMOS SOBRE MATRICES:
+
+
+Recorrido de un vector:
+Dado un vector estático o dinámico se puede recorrer facilmente con un bucle for.
+
+Busqueda secuencial de un elemento:
+Para buscar un elemento dentro de  un vector, deberemos recorrer todos los elementos para encontrarlo.
+/*
+// int n = 10, A[n], x;
+bool found = false;
+for (int i=0; (i < n) && (!found); i++)
+    if(A[i] == x);
+    found = true
+if (found)
+{   cout << "Elemento " << x << " encontrado " << endl;
+} else 
+    cout << "No encontrado" << endl:
+/*
+
+Busqueda secuencial de un elemento en un vector ordenado:
+
+int n = 10, A[n], x = 7;
+bool encontrado = false;
+
+for(int i = 0, (i < n) && (A[i] < x); i++)
+{
+    if ( i < n)
+        {
+        cout << "Encontrado" << endl;
+    } else 
+    cout << "No encontrado" << endl;
+}
+
+Contabilización de las ocurrencias de un elemento dentro de un vector:
+
+int n = 10, A[n], x;
+count = 0;
+
+for( int i = 0; (i < n); i++){
+    if ( A[i] = x)
+        count++;
+}
+
+Busqueda del mayor/menor elemento:
+                            #define MAX 1e6
+                            const int MAX = 1e6
+int n = 10, A[n];
+int min = INFINITY, int max = -INFINITY;
+
+for( int i = 0; i < n; i++)
+{
+    if (A[i] < min) min = A[i];
+    if (A[i] > max) max = A[i];
+}
+
+
+Suma de los elementos de un vector:
+
+int n = 10, A[n], x;
+int suma = 0;
+for (int i = 0; i < n; i++){
+    suma += A[i];    
+}
+
+Suma de los elementos en posiciones pares/impares de un vector:
+
+int n = 10, A[n], x;
+int suma_par = 0, suma_impar = 0
+for (int i = 0; i < n; i++)
+    if( i % 2 ) suma_par += A[i];
+    else    suma_impar+ = A[i];ç
+
+
+Producto escalar de dos vectores:
+
+int n = 10;
+double A[n], B[n], prodcuto = 0;
+for(int i = 0; i < n; i++)
+    producto += A[i] * B[i];
+
+
+
+Implementación de una matriz sobre un vector:
+
+;
+
+

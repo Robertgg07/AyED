@@ -1,0 +1,54 @@
+REPASO C++ POO:
+vector.resize() = elimina todos los datos del vector para cambiarle el tamaño. 
+
+Clases y Objetos
+
+public: todo el mundo accede a el
+private: solo los miembros de la misma clase puede  modificar, leer y ejecutar los métodos
+
+
+Tipos de Métodos:
+
+Selectores(getters)
+evaluan el estado de un objeto, útiles para extraer el valor de atributos privados.
+
+Transformadores(setters)
+alteran el estado del objeto, útiles para modificar el valor de los atributos privados.
+
+Constructores:
+Se ejecutan al crear un objeto, tienen el mismo nombre de la clase precedido de “~” y no devuelven ningún tipo, siempre hay que ponerle un constructor por defecto.
+
+Destructores:
+Se ejecutan cuando un objeto deja de existir, tienen el mismo nombre de la clase, no tienen parámetros, no devuelven nada y no pueden ser sobrecargados, suelen usarse para liberar memoria dinámica.
+
+Constantes:
+Se usan para impedir la modificación de algun parámetro, casi siempre se usa en los getters.
+
+Constructores Sobrecargados:
+Un constructor puede ser sobrecargado.
+
+El puntero "this":
+EL puntero "this" es transparente a nosotros, apunta a la direccion fisica en RAM a la que definió el objeto.
+
+Parámetros de tipo Clase:
+
+Se usa para evitar copias potencialmente inestables de estructuras complejas, es conveniente que el paso de parámetros de tipo clase se haga por referencia.
+
+Operadores:
+
+
+
+Herencia:
+
+Se usa para crear clase a partir de los métodos de una clase anterior ya creada.
+La parte privada nunca se hereda, solo la pública y la protegido.
+
+Funciones y clases Friend:
+Cuando una clase cuya cabecera tenga friend dentro de la declaración de una clase tiene permiso para acceder a los miembros private y protected de la misma.
+
+Plantillas(template):
+Permiten que una clase, o funcion trabaje con difeerentes tipos de datos sin tener que reescribir el codigo para cada tipo.
+Las plantillas de clases permiten que los miembros puedan usar parámetros de la template como tipos.
+
+Espacios de nombres(namespace):
+Se utilizan para evitar conflictos entre nombres, perimitiendo que varias clases y funciones se agrupen bajo ámbito(scope) separado.
