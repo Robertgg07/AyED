@@ -70,5 +70,14 @@ int main()
   cout << "Multiplicacion de matrices entre A y B: " << endl;
   C.write();
 
+  /// Modificación Centro de Cálculo
+vector_t<double> c;
+c.sum(v, w);
+
+cout << "Suma de los vectores v y w: ";
+c.write();
+
+cout << endl;
+
   return 0;
 }

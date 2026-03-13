@@ -55,7 +55,7 @@ template<class T> class vector_t {
 
     void write(ostream& = cout) const;
     void read(istream& = cin);
-
+    void sum(const vector_t<T>&, const vector_t<T>&);
   private:
 
     T *v_;
@@ -204,4 +204,19 @@ double scal_prod(const vector_t<rational_t>& v, const vector_t<rational_t>& w) {
   }
 
   return producto_escalar;
+}
+
+/// @brief Método que suma dos vectores
+/// Modificación Centro de Cálculo
+
+template<class T> void vector_t<T>::sum(const vector_t<T>& A, const vector_t<T>& B) {
+
+  assert(A.get_size() == B.get_size());
+
+  resize(A.get_size());
+
+  for (int i{}; i < get_size(); i++) {
+
+    at(i) = A.at(i) + B.at(i);
+  }
 }
