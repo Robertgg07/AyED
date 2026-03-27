@@ -282,7 +282,6 @@ bool SparsePolynomial::IsEqual(const Polynomial& pol, const double eps) const {
 }
 
 /// @brief Modificación Centro de Cálculo, Cálcula el valor del monómio de grado mayor y menor.
-/// @brief Mostrar monomio de menor y mayor grado (no nulos) recorriendo el vector
 void SparsePolynomial::ShowMinMax(std::ostream& os) const {
 
   if (get_nz() == 0) {
