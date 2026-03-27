@@ -102,5 +102,17 @@ int main()
   cout << "sp3 == p2? " << (sp3.IsEqual(p2) ? "true" : "false") << endl;
   cout << endl;
 
+/// Modificación Centro de Cálculo, Muestra los Extremos de sp1, sp2 y sp3.
+cout << "Extremos de sp1: ";
+sp1.ShowMinMax();
+
+cout << "Extremos de sp2: ";
+sp2.ShowMinMax();
+
+cout << "Extremos de sp3: ";
+sp3.ShowMinMax();
+
+cout << endl;
+
   return 0;
 }

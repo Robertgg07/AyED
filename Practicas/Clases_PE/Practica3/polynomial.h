@@ -68,6 +68,9 @@ class SparsePolynomial : public sparse_vector_t {
     double Eval(const double) const;
     bool IsEqual(const SparsePolynomial&, const double = EPS) const;
     bool IsEqual(const Polynomial&, const double = EPS) const;
+
+    /// @brief Modificación centro de Cálculo, Método ShowMinMax
+    void ShowMinMax(std::ostream& os = std::cout) const;
 };
 
 /// @brief Método para imprimir un polinomio por vector denso
@@ -196,7 +199,7 @@ double SparsePolynomial::Eval(const double x) const {
 }
 
 /// FASE IV
-/// @brief Comparación si son iguales dos polinomios representados por vectores dispersos
+/// @brief Compara si dos polinomios representados por vectores dispersos son iguales 
 bool SparsePolynomial::IsEqual(const SparsePolynomial& spol, const double eps) const {
 
   bool differents = false;
@@ -216,7 +219,7 @@ bool SparsePolynomial::IsEqual(const SparsePolynomial& spol, const double eps) c
   return !differents;
 }
 
-/// @brief Comparación si son iguales dos polinomios representados por vector disperso y vector denso
+/// @brief Compara si dos polinomios representados por vector disperso y vector denso son iguales
 bool SparsePolynomial::IsEqual(const Polynomial& pol, const double eps) const {
 
   bool differents = false;
@@ -278,4 +281,31 @@ bool SparsePolynomial::IsEqual(const Polynomial& pol, const double eps) const {
   return !differents;
 }
 
+/// @brief Modificación Centro de Cálculo, Cálcula el valor del monómio de grado mayor y menor.
+void SparsePolynomial::ShowMinMax(std::ostream& os) const {
+
+  if (get_nz() == 0) {
+    os << "Polinomio nulo" << std::endl;
+    return;
+  }
+
+  const pair_double_t& min = at(0);
+  const pair_double_t& max = at(get_nz() - 1);
+
+  os << "Menor grado: " << min.get_val();
+  if (min.get_inx() > 0) {
+    os << " x";
+    if (min.get_inx() > 1)
+      os << "^" << min.get_inx();
+  }
+
+  os << " | Mayor grado: " << max.get_val();
+  if (max.get_inx() > 0) {
+    os << " x";
+    if (max.get_inx() > 1)
+      os << "^" << max.get_inx();
+  }
+
+  os << std::endl;
+}
 #endif  /// POLYNOMIAL_H_
