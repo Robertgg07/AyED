@@ -6,7 +6,7 @@
   *
   * @file main_polynomial.cc
   * @author Robert García García alu0101825878
-  * @date March 1 2026
+  * @date March 24 2026
   * @brief Programa principal
   * @bug There are no known bugs
   * @see 
