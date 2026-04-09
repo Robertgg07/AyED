@@ -61,7 +61,7 @@ void GRAFO :: build(char nombrefichero[85], int &errorapertura)
 
         textfile.close();
 
-        // Si es dirigido → construir LP
+        // Si es dirigido,construir LP
         if (dirigido == 1)
             ListaPredecesores();
     }
