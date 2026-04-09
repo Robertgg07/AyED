@@ -48,7 +48,7 @@ void GRAFO :: build(char nombrefichero[85], int &errorapertura)
             dummy.j = j - 1;
             LS[i - 1].push_back(dummy);
 
-            // Si es NO dirigido → añadir simétrico
+            // Si es NO dirigido, añadir simétrico
             if (dirigido == 0)
             {
                 if (i != j)
@@ -61,7 +61,7 @@ void GRAFO :: build(char nombrefichero[85], int &errorapertura)
 
         textfile.close();
 
-        // Si es dirigido,construir LP
+        // Si es dirigido,se construye ListaPredecesores
         if (dirigido == 1)
             ListaPredecesores();
     }
@@ -158,3 +158,5 @@ void GRAFO::ListaPredecesores()
         }
     }
 }
+
+//Modificación: Dar la componente conexa de la clase
